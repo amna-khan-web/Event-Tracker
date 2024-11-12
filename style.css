@@ -1,0 +1,129 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+    color: #fff;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    margin: 0px;
+    height: 100vh;
+    background-image: url("assest/image.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+h1{
+    text-align: center;
+   font-size: 4rem;
+
+}
+.eventDisplay {
+    display: flex;
+    width: 40rem;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem 4rem;
+    margin-top: 1rem;
+    line-height: 50px;
+    background-image:linear-gradient(rgb(90, 94, 95),rgb(239, 241, 248));
+    border-radius: 8px;
+}
+h3{
+    font-size: 2rem;
+}
+p {
+    font-size: 1.4rem;
+    color: rgb(13, 7, 99);
+    font-weight: bold;
+    font-style: italic;
+}
+button {
+    width: 20rem;
+    padding: 0.45rem;
+    font-size: 1rem;
+    border: none;
+    color: rgb(17, 15, 15);
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+/*  MousePosition trackerEvent_Section Start  */
+#mouseCursor {
+    height: 15rem;
+    width: 15rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(245, 224, 241);
+    font-size: 2rem;
+    border-radius: 8px;
+    color: rgb(84, 112, 7);
+}
+ #mouseCursor:hover {
+    cursor: pointer;
+    height: 20rem;
+    width: 20rem;
+    color: rgb(226, 121, 95);
+} 
+input {
+    width: 20rem;
+    padding: 0.45rem;
+    font-size: 1rem;
+    border: none;
+    color: rgb(17, 15, 15);
+    background-color: #fff;
+    border-radius: 8px;
+    text-align:center ;
+}
+#sub{
+    background-color: rgb(56, 37, 41);
+    color: white;
+    border: none;
+    font-weight: bold;
+}
+
+#myInput {
+    width: 100%;
+    align-items: center;
+}
+
+/* drag and drop event tracker start from here// */
+#drag {
+    width: 50%;
+    height: 25vh;
+    background-image: url("assest/shadow.png");
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed #000;
+    border-radius: 8px;
+}
+
+#drop {
+    width: 50%;
+    height: 25vh;
+    background-color: rgb(97, 141, 101);
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed #12033b;
+    border-radius: 8px;
+    margin-top: 8px;
+    
+}
+
+
+/* media event Style video  */
+video{
+   width: 100%;
+    border-radius: 15px;
+}
+

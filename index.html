@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Event Tracker</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+
+<body>
+
+    <h1>Complete Event Tracker</h1>
+    <!-- ClickEvent Section -->
+    <div class="eventDisplay">
+        <h3>Click Event</h3>
+
+        <button id="clickIt">Click_me!</button>
+        <p id="countIt">Click Count: 0</p>
+    </div>
+
+    <!-- MousePosition tracerEvent_Section Start -->
+    <div class="eventDisplay Display2">
+        <h3>Mouse Events</h3>
+        <div id="mouseCursor">300 x 300</div>
+        <p id="mousePosition">Mouse Position: (0, 0)</p>
+    </div>
+
+    <!-- keyboardEvent display -->
+    <div class="eventDisplay Display3">
+        <h3>Keyboard Events</h3>
+        <input type="text" id="keyIn" placeholder="Press any Key">
+        <p id="keyOut">Last Key Pressed: None </p>
+    </div>
+
+
+    <!-- Focus and Blur Events Section Start!-->
+    <div class="eventDisplay Display4">
+        <h3>Focus and Blur Events</h3>
+        <input type="text" id="focBlurIn" placeholder="Focus & Blur">
+        <p id="focBlurOut">Status Check Here....</p>
+    </div>
+
+
+    <!-- Window Resize Event section Start -->
+    <div class="eventDisplay Display5">
+        <h3>Window Resize Event</h3>
+        <p id="sizeWindow">Window width: 0px, height :0px </p>
+    </div>
+
+
+    <!-- Form_Submit Event Section Start -->
+    <div class="eventDisplay Display7">
+        <h3>Form Submit Event</h3>
+        <form id="submit_Form">
+            <input type="text" id="myInput" placeholder="Enter_text & submit">
+            <br>
+            <button id="sub" type="submit">Submit</button>
+        </form>
+        <p id="form_Status">Form Status: Unprocessed </p>
+    </div>
+
+
+
+    <!-- Drag and Drop Event -->
+    <div class="eventDisplay Display8">
+        <h3>Drag and Drop Event</h3>
+        <div id="drag" draggable="true" aria-placeholder="Drag Here">Drag Here!</div>
+        <div id="drop" aria-placeholder="Drop Here">Drop Here!</div>
+        <p id="dragDropStatus">Drag and Drop Status: </p>
+    </div>
+    
+
+    <!-- Media event starting section  from here with its internally js file attach!!! -->
+
+    <!-- here HTML element and their content -->
+    <div class="eventDisplay Display9">
+        <h3>Media Event</h3>
+        <video id="video" controls>
+            <source src="assest/video_mp4.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <p id="multiMedia">Media Status: Not started</p>
+    </div>
+ 
+    <!-- Now! start here JS file internally -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            let video = document.getElementById('video');
+            let statusText = document.getElementById('multiMedia');
+
+            // Video play event
+            video.addEventListener('play', function () {
+                statusText.innerText = 'Media is playing';
+                statusText.style.color = "green";
+            });
+
+            // Video pause event
+            video.addEventListener('pause', function () {
+                statusText.innerText = 'Media is paused';
+                statusText.style.color = "red";
+            });
+
+            // Video ended event
+            video.addEventListener('ended', function () {
+                statusText.innerText = 'Media has ended';
+                statusText.style.color = "purple";
+            });
+        });
+    </script>
+    <!-- media event has been ended! -->
+
+    <script src="script.js"></script>
+</body>
+
+</html>
